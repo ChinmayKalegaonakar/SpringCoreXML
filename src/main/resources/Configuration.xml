@@ -16,5 +16,8 @@
 
   <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byType">
   </bean>
-
+  <bean id="beanLifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean">
+  </bean>
+  <bean id="custominit" class="com.stackroute.demo.BeanLifecycleDemoBean" factory-bean="beanLifecycle" factory-method="customInit"></bean>
+  <bean id="customdestroy" class="com.stackroute.demo.BeanLifecycleDemoBean" factory-bean="beanLifecycle" factory-method="customDestroy"></bean>
 </beans>
