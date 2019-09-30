@@ -20,4 +20,7 @@
   </bean>
   <bean id="custominit" class="com.stackroute.demo.BeanLifecycleDemoBean" factory-bean="beanLifecycle" factory-method="customInit"></bean>
   <bean id="customdestroy" class="com.stackroute.demo.BeanLifecycleDemoBean" factory-bean="beanLifecycle" factory-method="customDestroy"></bean>
+  <bean id="beanPostProcess" class="com.stackroute.demo.BeanPostProcessorDemoBean">
+  </bean>
+  <bean id="customCall" class="com.stackroute.demo.BeanPostProcessorDemoBean" factory-bean="beanPostProcess" factory-method="toS"></bean>
 </beans>
