@@ -9,11 +9,22 @@
 
 
 <bean id="actor1" class="com.stackroute.domain.Actor">
-  <property name="name" value="actor1"/>
-  <property name="gender" value="male"/>
-  <property name="age" value="30"/>
+  <constructor-arg value="actor1"/>
+  <constructor-arg value="male"/>
+  <constructor-arg value="28" type="int"/>
 </bean>
-  <bean id="movie1" class="com.stackroute.domain.Movie">
+  <bean id="actor2" class="com.stackroute.domain.Actor">
+    <constructor-arg value="actor2"/>
+    <constructor-arg value="female"/>
+    <constructor-arg value="30" type="int"/>
+  </bean>
+  <bean id="actor3" class="com.stackroute.domain.Actor">
+    <constructor-arg value="actor3"/>
+    <constructor-arg value="male"/>
+    <constructor-arg value="32" type="int"/>
+  </bean>
+
+  <bean name="movie1 , movie2" class="com.stackroute.domain.Movie" scope="prototype">
     <property name="actor" ref="actor1"/>
   </bean>
 

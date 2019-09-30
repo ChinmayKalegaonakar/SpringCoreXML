@@ -13,10 +13,15 @@ public class Main {
     //XmlBeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("Configuration.xml"));
     ApplicationContext context = new ClassPathXmlApplicationContext("Configuration.xml");
 
-    Movie movie = (Movie) context.getBean("movie1");
-    // should print actor1 male 30
-    movie.printActor();
-
+    Movie beanA = (Movie) context.getBean("movie1");
+    // should print actor1 male 28
+    beanA.printActor();
+    Movie beanB = (Movie) context.getBean("movie1");
+    // false when scope is prototype
+    System.out.println(beanA==beanB);
+    Movie beanC = (Movie) context.getBean("movie2");
+    // should print actor1 male 28
+    beanC.printActor();
 	}
 
 }
