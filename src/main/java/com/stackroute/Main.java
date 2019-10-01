@@ -14,18 +14,18 @@ public class Main {
 
 	public static void main(String[] args) {
 
-    XmlBeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("Configuration.xml"));
-    DefaultListableBeanFactory listBeanFactory = new DefaultListableBeanFactory();
-    BeanDefinitionReader reader = new XmlBeanDefinitionReader(listBeanFactory);
-    reader.loadBeanDefinitions(new FileSystemResource("src/main/resources/Configuration.xml"));
+//    XmlBeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("Configuration.xml"));
+//    DefaultListableBeanFactory listBeanFactory = new DefaultListableBeanFactory();
+//    BeanDefinitionReader reader = new XmlBeanDefinitionReader(listBeanFactory);
+//    reader.loadBeanDefinitions(new FileSystemResource("src/main/resources/Configuration.xml"));
     ApplicationContext context = new ClassPathXmlApplicationContext("Configuration.xml");
-    Movie beanFMovie =(Movie) beanFactory.getBean("movie1");
-    Movie beanDMovie = (Movie) beanFactory.getBean("movie1");
+//    Movie beanFMovie =(Movie) beanFactory.getBean("movie1");
+//    Movie beanDMovie = (Movie) beanFactory.getBean("movie1");
     Movie movie = (Movie) context.getBean("movie1");
 
-    // should print actor1 male 30
-    beanFMovie.printActor();
-    beanDMovie.printActor();
+    // should print actor1 male 28
+//    beanFMovie.printActor();
+//    beanDMovie.printActor();
     movie.printActor();
 
 
