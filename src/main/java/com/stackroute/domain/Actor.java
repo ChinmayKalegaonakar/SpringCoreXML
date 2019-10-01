@@ -1,9 +1,9 @@
 package com.stackroute.domain;
 
 public class Actor {
-  String name;
-  String gender;
-  int age;
+  private String name;
+  private String gender;
+  private int age;
   public String getName() {
     return name;
   }
