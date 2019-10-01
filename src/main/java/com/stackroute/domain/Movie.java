@@ -1,7 +1,7 @@
 package com.stackroute.domain;
 
 public class Movie {
-  Actor actor;
+  private Actor actor;
   public Actor getActor() {
     return actor;
   }
